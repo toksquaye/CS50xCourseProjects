@@ -1,0 +1,28 @@
+0.  pneumonoultramicroscopicsilicovolcanoconiosis is a term referring toa lung disease caused by silica dust.  This is also sometimes
+cited as one of the longest words in the English language.
+
+1.  getrusage returns the resource usage measure for a process into a data structure that is passed in as the 2nd parameter.
+
+2.  struct rusage has 16 members
+
+3.  before and after are passed by reference to calculate because they are big structures and will be a waste to pass a copy of the entire structure
+into the function. simply passing the pointer to the structure saves time and memory.
+
+4.  The for loop reads the words 1 character at a time. If the character is an alphabet or an apostrophe, the character is appended as part of the current
+word. If the current character is the 46th character of the word, discard the word as being too long and look for the start of the next word.  
+Do the same if a digit is encountered. If current character is not alphanumeric, not "\", not a digit, then it's most likely a new line, which signifies 
+the end of a word.  Append the '\0' character to the current word and pass it on to be checked.  Read until EOF is encountered.
+
+5.  If we rely on fscanf alone, will need to validate the string after it's been read - taking up precious processing time.  Reading the strings one 
+character at a time allows us to incorporate the validation along with the read.
+
+6.  The parameters were declared as consts so that they won't be modified in the function.
+
+7.  I implemented a trie, with each node containing a boolean field as well as 27 pointers to other children nodes. The 27 pointers are for the
+alphabets A - Z & apostrophe. The boolean field is set to true, if the current node denotes the end of a valid word.
+
+8.  For 143091 words, my code spent .13 seconds in load, .02 in check & .08 in unload.
+
+9. My attempts to improve the load time were futile. :-(  This was the best time I was able to code it for.
+  
+10. No. I think .13 seconds is a good time to load 143091 words.  Checking the words and unloading the dictionary run quite fast as well.

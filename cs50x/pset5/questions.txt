@@ -1,0 +1,46 @@
+1. GIF - 8 bits/pixel - 256 different colors
+   BMP varies depending on bits/pixel. 1bpp - 2 colors, 2bpp - 4 colors, 4bpp - 16 colors, 8bpp - 256 colors, 16bpp - 65536 colors, 
+   24bpp - 16,777.216 colors, 32 bpp - 4,294,967,296 colors
+   JPEG - most popular is 24bpp - 16,777,214 colors
+   PNG - 24bpp - 16,777,214 colors, 32bpp - 4,294,967,296 colors
+ 
+2. GIF supports animation
+
+3.Lossy compression permits reconstruction only of an approximation of the original.  Lossless compression allows original data to be perfectly 
+reconstructed from compressed data.
+
+4. JPEG is lossy compressed.
+
+4.In a FAT system, when a file is deleted, the actual file data is never touched.  The system simply modifies the filename's first character
+to denote that the file has been deleted and the directory entry can be recycled.  The system then moves all the file's FAT clusters to the 
+hard drive's list of free clusters.
+
+5. I can choose to reboot the PC disk which will fill every addressable block with ASCII null bytes os that the original datat cannot be recovered. Or, 
+I can get a free sanitization tool on the internet.
+
+6. stdint.h is the header file that defines sets of integer types with specific widths and their corresponding macros.
+
+7.They specify the exact number of bits being used to represent the different fields in the struct.
+
+8. BYTE - 1byte   DWORD - 4bytes  LONG - 4bytes     WORD - 2bytes
+
+9. 1st 2 bytes identify the BMP file.  Value is BM in ascii.
+
+10. bfsize - size of the BMP file in bytes
+    bisize - size of the bitmap info header
+    
+11. biHeight - if it's negative, the bitmap is a top-down DIB. It's origin is the upper-left corner
+
+12. biBitCount specifies bits per pixel
+
+13. It will be NULL if there's no space in the directory for the file to be created.
+
+14.It's always 1 because we're reading one element of data at a time.
+
+15. The padding will be 3.
+
+16. fseek moves the file position indicator to a new location determined by the number of bytes in the 2nd parameter
+
+17 seek_cur is the current postion of the file.
+
+18. Milo Banana dun it
